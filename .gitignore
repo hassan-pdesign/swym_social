@@ -25,6 +25,7 @@ var/
 # Database
 *.db
 *.sqlite3
+swym_social.db
 
 # Logs
 *.log
