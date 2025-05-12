@@ -1,0 +1,24 @@
+swym-content-agent/
+│
+├── app/                     # Core application logic
+│   ├── agents/              # LLM + image generation agent modules
+│   ├── ingestion/           # Website/doc parsing + classification
+│   ├── retrieval/           # RAG pipeline (LlamaIndex etc.)
+│   ├── templates/           # Image templates (SVG, PNG, JSON placeholders)
+│   ├── scheduler/           # Post scheduling + publishing logic
+│   ├── api/                 # FastAPI routes + endpoints
+│   ├── models/              # Pydantic models for data validation
+│   ├── services/            # Utility services (storage, database, APIs)
+│   ├── dashboard/           # Streamlit or internal review UI (optional v1)
+│   └── config.py            # Centralized config (keys, paths, constants)
+│
+├── data/                    # Example content, sample test inputs
+│
+├── tests/                   # Unit + integration tests
+│
+├── scripts/                 # One-off scripts (template tests, db setup)
+│
+├── requirements.txt         # Python dependencies
+├── Dockerfile               # Containerization for deployment (optional)
+├── README.md                # Project overview + setup guide
+└── .env                     # Environment variables (NEVER commit to Git)

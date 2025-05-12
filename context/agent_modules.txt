@@ -1,0 +1,49 @@
+Here’s the **recommended core agent modules + libraries for v1 (Python stack)**:
+
+---
+
+### 🛠️ **Core Agent Modules**
+
+1. **Content Ingestion Agent**
+
+   * Scrape website & docs → store raw text
+   * Libraries: `BeautifulSoup`, `Playwright`, `PyPDF2`, `docx`
+
+2. **Content Classification Agent**
+
+   * Tag content into categories (feature, case study, trivia, update)
+   * Libraries: `OpenAI GPT-4 Turbo`, `Scikit-learn` (optional backup classifier)
+
+3. **Content Retrieval Service**
+
+   * RAG pipeline to pull relevant content for posts
+   * Libraries: `LlamaIndex` or `LangGraph` + `OpenAI Embeddings`
+
+4. **Content Generation Agent**
+
+   * Generate draft post captions (LinkedIn, X, Instagram)
+   * Libraries: `OpenAI GPT-4 Turbo`, `LangGraph / CrewAI` for agent flow
+
+5. **Template Image Generator**
+
+   * Insert content into pre-made templates
+   * Libraries: `Pillow (PIL)` for static image generation
+   * Alternative: `Python-PPTX` + export slides as images for simple templating
+   * Optional: `Figma API` if using Figma templates
+
+6. **Internal Review Dashboard**
+
+   * Human review + edit UI
+   * Libraries: `Streamlit` (easy MVP) or `React + FastAPI backend` (scalable)
+
+7. **Scheduler + Publisher**
+
+   * Queue approved posts + publish via APIs
+   * Libraries: `APScheduler`, `Celery + Redis` for background tasks
+   * Platform APIs: `LinkedIn API`, `X API`, `Instagram Graph API`
+
+8. **Database + Storage**
+
+   * Store content drafts, templates, approvals
+   * Libraries: `SQLAlchemy + PostgreSQL`, `AWS S3 / Google Cloud Storage` for image files
+

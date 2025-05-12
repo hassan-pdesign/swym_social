@@ -1,0 +1,45 @@
+Here’s the **recommended v1 template set for Swym**:
+
+---
+
+### 🎨 **Template Types**
+
+1. **Feature Showcase Cards**
+
+   * Product logo + feature icon
+   * Headline + short feature description
+   * Example: “Back in Stock Alerts: Never lose a sale again!”
+
+2. **Case Study Highlights**
+
+   * Brand logo + customer quote
+   * Key metrics (e.g., +30% sales, 150X ROI)
+   * Example: “How Princess Polly boosted retention with Wishlist Plus”
+
+3. **Industry Trivia / Stats**
+
+   * Bold stat or fact + graphic icon
+   * Small “powered by Swym” branding
+   * Example: “80% of online shoppers expect personalization”
+
+4. **Product Update Announcements**
+
+   * Product logo + update icon
+   * Short update text + call to action
+   * Example: “New integration: Swym now supports Omnisend!”
+
+5. **Quote / Testimonial Cards**
+
+   * Customer name + photo (optional)
+   * Quote + subtle Swym branding
+   * Example: “Swym helped us increase AOV by 90% - Lane 201”
+
+6. **Event / Webinar Announcements** *(optional for future)*
+
+   * Event name + date + CTA
+   * Example: “Join us at Shopify Unite - Booth #24”
+
+---
+
+Each template can be designed as Figma and filled programmatically.
+

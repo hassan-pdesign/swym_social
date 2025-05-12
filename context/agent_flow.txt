@@ -1,0 +1,44 @@
+          +--------------------+
+          |  Content Sources   |
+          | (Website, Docs,    |
+          |  Testimonials, etc)|
+          +--------------------+
+                    |
+                    v
+     +--------------------------------+
+     | Content Ingestion + Classification |
+     | (scrape + categorize by theme)     |
+     +--------------------------------+
+                    |
+                    v
++--------------------------------------------------+
+| Retrieval-Augmented Generation (RAG) using LLM  |
+| (Query relevant content for post context)       |
++--------------------------------------------------+
+                    |
+                    v
++----------------------------------------------+
+| Content Generation Agent                      |
+| - Draft text post (LinkedIn, X, Instagram)   |
+| - Identify template type + content inputs    |
++----------------------------------------------+
+                    |
+                    v
++----------------------------------------------+
+| Template-based Image Generator                |
+| - Use pre-designed branded templates         |
+| - Auto-fill text, logo, product image        |
+| - Export static PNG/JPG                      |
++----------------------------------------------+
+                    |
+                    v
++----------------------------------------------+
+| Internal Review Dashboard (Streamlit/React)   |
+| - Human approves/edits drafts + images        |
++----------------------------------------------+
+                    |
+                    v
++----------------------------------------------+
+| Scheduler + Publisher                         |
+| - Schedule + post to LinkedIn, X, Instagram  |
++----------------------------------------------+

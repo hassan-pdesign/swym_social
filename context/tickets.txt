@@ -1,0 +1,130 @@
+# PHASE 1: SETUP & INGESTION
+
+[Ticket 1] 🚀 Project Setup
+- Create a new repo: swym-content-agent
+- Set up recommended folder structure
+- Initialize Python virtual environment
+- Install: fastapi, pydantic, sqlalchemy, psycopg2, pillow
+- Connect Cursor project to repo
+
+[Ticket 2] ⚙️ FastAPI + Pydantic Core
+- Set up FastAPI app skeleton
+- Create health check endpoint (`/health`)
+- Define basic Pydantic response model
+
+[Ticket 3] 🛢️ PostgreSQL + ORM Setup
+- Set up PostgreSQL locally (or use Docker)
+- Create SQLAlchemy models for: ContentSource, PostDraft, ImageAsset
+- Integrate DB into FastAPI via session dependency
+
+[Ticket 4] 🕸️ Content Ingestion - Website Scraper
+- Use BeautifulSoup + Playwright to crawl website pages
+- Extract title, body text, URL
+- Save raw content in ContentSource table
+
+[Ticket 5] 📥 Content Ingestion - Internal Docs
+- Add support for PDF (PyPDF2) + DOCX (python-docx) parsing
+- Create parser service for internal case studies
+- Save extracted content into ContentSource table
+
+---
+
+# PHASE 2: CLASSIFICATION + RETRIEVAL
+
+[Ticket 6] 🏷️ Content Classification Agent
+- Create OpenAI GPT-4 based agent
+- Classify each ContentSource as: feature, case study, trivia, update
+- Store classification tag in DB
+
+[Ticket 7] 🗄️ Store Content Metadata
+- Create/update DB schema for storing content type, source, tags
+- Write DB functions for querying by content type
+
+[Ticket 8] 🔎 RAG Content Retrieval Service
+- Integrate LlamaIndex or LangGraph
+- Index all ContentSource data
+- Create retrieval function: input = query → output = top content chunks
+
+---
+
+# PHASE 3: POST GENERATION AGENT
+
+[Ticket 9] 📝 Post Generation Agent
+- Create LLM agent to draft post copy for LinkedIn, X, Instagram
+- Use RAG output as context input to GPT-4
+- Define structured output model via Pydantic
+
+[Ticket 10] 🎯 Post Draft Database Model
+- Create PostDraft table
+- Save generated drafts with metadata: platform, content type, status (draft/pending/approved)
+
+---
+
+# PHASE 4: TEMPLATE IMAGE GENERATOR
+
+[Ticket 11] 🎨 Design Image Templates
+- Create 5–6 brand-aligned templates (Figma, SVG, PSD, JSON skeletons)
+- Export base assets to `app/templates/`
+
+[Ticket 12] 🖼️ Image Generator Service
+- Use Pillow (PIL) to auto-fill templates with title, metrics, logos
+- Generate + export static PNG/JPG images
+
+[Ticket 13] 💾 Save Generated Images
+- Store generated images in `ImageAsset` table
+- Link images to corresponding PostDraft entries
+
+---
+
+# PHASE 5: REVIEW DASHBOARD (Optional)
+
+[Ticket 14] 👀 Build Review Dashboard MVP
+- Use Streamlit to list PostDrafts + show attached images
+- Display approve/reject buttons
+
+[Ticket 15] ✏️ Human Feedback + Edits
+- Allow manual edit of post copy in Streamlit UI
+- On approval, mark PostDraft as ready for publishing
+
+---
+
+# PHASE 6: SCHEDULING + PUBLISHING
+
+[Ticket 16] ⏳ Set Up Celery + Redis
+- Install Celery + Redis broker
+- Create background task system for post queueing
+
+[Ticket 17] 🗓️ Post Scheduler Service
+- Create scheduler to fetch approved PostDrafts
+- Set publishing times per platform rules
+
+[Ticket 18] 🔗 LinkedIn Publishing Integration
+- Connect to LinkedIn API
+- Write service to publish approved drafts
+
+[Ticket 19] 🔗 X (Twitter) Publishing Integration
+- Connect to X (Twitter) API
+- Write service to publish approved drafts
+
+[Ticket 20] 🔗 Instagram Publishing Integration
+- Connect to Instagram Graph API
+- Write service to publish approved drafts
+
+---
+
+# PHASE 7: TESTING + FINALIZATION
+
+[Ticket 21] ✅ Unit Tests for Core Agents
+- Write pytest tests for ingestion, classification, generation, image modules
+
+[Ticket 22] 🔗 End-to-End Integration Test
+- Simulate full pipeline: ingest → classify → generate post + image → review → queue → publish (mock API)
+
+[Ticket 23] 📝 Internal Documentation
+- Document folder structure, setup, key workflows
+- Add example usage instructions
+
+[Ticket 24] 🎉 MVP Internal Launch
+- Run soft-launch internally
+- Collect feedback
+- Log bugs + create future improvements list

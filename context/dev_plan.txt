@@ -1,0 +1,59 @@
+Here’s a **recommended development milestone plan for Swym AI Content Agent (v1)**:
+
+---
+
+### 🪜 **Phase 1: Foundation (Weeks 1-2)**
+
+* Set up **FastAPI + Pydantic core backend**
+* Configure **PostgreSQL + storage buckets**
+* Build basic **content ingestion module (website/docs)**
+* Set up **internal Git + CI/CD pipeline**
+
+---
+
+### 🪜 **Phase 2: Core AI Agent (Weeks 3-5)**
+
+* Implement **content classification agent** (LLM + fallback classifier)
+* Build **RAG-based content retrieval service**
+* Integrate **OpenAI GPT-4 Turbo for post drafts**
+
+---
+
+### 🪜 **Phase 3: Template Image Generation (Weeks 6-7)**
+
+* Create **5-6 reusable branded image templates**
+* Develop **Pillow-based image filling module**
+* Test **template generation end-to-end**
+
+---
+
+### 🪜 **Phase 4: Internal Review Dashboard (Weeks 8-9)**
+
+* MVP dashboard via **Streamlit**
+* Display drafts + images → allow edit/approve/reject
+* Link dashboard to DB + storage
+
+---
+
+### 🪜 **Phase 5: Scheduler + Publishing (Weeks 10-11)**
+
+* Build **post scheduling module (APScheduler / Celery)**
+* Connect to **LinkedIn, X, Instagram APIs**
+* Test safe publishing with test accounts
+
+---
+
+### 🪜 **Phase 6: Final QA + Launch (Week 12)**
+
+* End-to-end QA
+* Team training + documentation
+* Go-live with limited internal users
+
+---
+
+### 🎉 **Post-MVP (Future Enhancements)**
+
+* Add **video generation + animations**
+* Add **multi-language post generation**
+* Add **advanced analytics module**
+

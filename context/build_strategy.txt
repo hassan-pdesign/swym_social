@@ -1,0 +1,36 @@
+Build Strategy in Cursor
+
+1. Set up core repo structure early
+- app/ → FastAPI + agent logic
+- templates/ → Static image templates
+- data/ → Example content for local dev
+- tests/ → Unit + integration tests
+
+2. Leverage Cursor for:
+- Writing + refactoring Pydantic models
+- Building agent chains (LangGraph / CrewAI)
+- Integrating OpenAI, LlamaIndex, Pillow modules
+- Auto-generating tests + validation checks
+
+3. Work in small iterative chunks
+- Cursor excels at modular development
+- Use AI co-pilot for boilerplate + repetitive tasks
+- Keep tight feedback loops: write → run → debug → refine
+
+4. Test locally early + often
+- Start with mock data + stubs for APIs
+- Focus first on agent flows + image generation
+- Delay full API integration until core works
+
+🛠️ Recommended Libraries for Solo Build
+- FastAPI + Pydantic → API + models
+- LangGraph → agent orchestration
+- Pillow (PIL) → static image generation
+- OpenAI GPT-4 Turbo → text generation
+- BeautifulSoup / Playwright → content scraping
+- Streamlit (optional) → review dashboard MVP
+
+✅ Tips:
+- Document everything as you go (Markdown in repo)
+- Treat each agent + service as a micro-service / module
+- Start with one platform (e.g., LinkedIn) before adding others
